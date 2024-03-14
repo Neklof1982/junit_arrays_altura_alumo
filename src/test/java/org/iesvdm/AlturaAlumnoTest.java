@@ -81,7 +81,7 @@ public class AlturaAlumnoTest {
 
         //assertTrue( arrayActual[arrayActual.length-1].equals(altura));
         // verifica que el nombre "Maria" esta en la posicion ultima
-
+        // falta
     }
 
 
