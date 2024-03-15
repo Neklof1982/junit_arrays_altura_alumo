@@ -76,11 +76,13 @@ public class AlturaAlumnoTest {
         array[0] = 1.70;
         array[1] = 1.90;
         double altura = 1.5;
-        double[] arrayActual = AlturaAlumno.añadeAltura(array, 1.5);
+        double [] arrayActual = AlturaAlumno.añadeAltura( array, 1.5);
 
-        //assertTrue( arrayActual[arrayActual.length-1].equals(altura));
-        // verifica que el nombre "Maria" esta en la posicion ultima
-        // falta ea
+        assertEquals(array, arrayActual);
+        arrayActual[arrayActual.length-1].equals(altura);
+        // verifica que altura por defecto se añade al final
+        // da error con el double
+
     }
 
 
