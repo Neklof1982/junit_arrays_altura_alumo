@@ -114,5 +114,16 @@ public class AlturaAlumnoTest {
     void modificaAltura2 () {
         //controla que este dentro del array
         double[] array = {1.6, 1.8, 1.7};
+        double[] arrayCopia = Arrays.copyOf(array, array.length);
+        int posicion = 1;
+        double altura = 1.9;
+
+        // Do (Hacer)
+
+        AlturaAlumno.modificaAltura(array, posicion, altura);
+
+        // Then (Entonces):
+
+        assertArrayEquals(arrayCopia, array);
     }
 }
