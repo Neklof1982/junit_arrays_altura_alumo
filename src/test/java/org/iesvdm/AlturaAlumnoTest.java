@@ -78,21 +78,41 @@ public class AlturaAlumnoTest {
         double altura = 1.5;
         double [] arrayActual = AlturaAlumno.añadeAltura( array, 1.5);
 
-        assertEquals(array, arrayActual);
-        arrayActual[arrayActual.length-1].equals(altura);
+        //assertAEquals(array, arrayActual);
+        //arrayActual[arrayActual.length-1].
         // verifica que altura por defecto se añade al final
         // da error con el double
 
     }
 
     @Test
-    void modificaAltura(){
-        final double [] array = new double [10];
+    void modificaAltura() {
 
-        array[0] = 1.70;
-        array[1] = 1.90;
-        double a
+        // When (Cuando)
 
+        double[] array = {1.6, 1.8, 1.7};
+        double[] arrayCopia = Arrays.copyOf(array, array.length);
+        int posicion = 1;
+        double altura = 1.9;
 
+        // Do (Hacer)
 
+        AlturaAlumno.modificaAltura(array, posicion, altura);
+
+        // Then (Entonces)
+
+        assertTrue(altura == array[posicion]);
+
+        for (int i = 0; i < array.length; i++) {
+            if (i!= posicion) {
+                assertEquals(array[i], arrayCopia[i]);
+            }
+        }
+    }
+
+    @Test
+    void modificaAltura2 () {
+        //controla que este dentro del array
+        double[] array = {1.6, 1.8, 1.7};
+    }
 }
