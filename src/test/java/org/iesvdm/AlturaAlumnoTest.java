@@ -85,5 +85,14 @@ public class AlturaAlumnoTest {
 
     }
 
+    @Test
+    void modificaAltura(){
+        final double [] array = new double [10];
+
+        array[0] = 1.70;
+        array[1] = 1.90;
+        double a
+
+
 
 }
