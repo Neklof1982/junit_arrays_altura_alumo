@@ -71,14 +71,16 @@ public class AlturaAlumnoTest {
 
     @Test
     void aniadeAltura () {
-        final double [] array = new double [10];
 
-        array[0] = 1.70;
-        array[1] = 1.90;
-        double altura = 1.5;
-        double [] arrayActual = AlturaAlumno.añadeAltura( array, 1.5);
+        //When (Cuando)
+        double[] array = {1.70, 1.90}; // Alturas iniciales
 
-        //assertAEquals(array, arrayActual);
+        // Do (Hacer)
+        double[] arrayActual = AlturaAlumno.añadeAltura(array);
+
+        // Then   (Entonces)
+
+        assertEquals(1.5, arrayActual[arrayActual.length-1]);
         //arrayActual[arrayActual.length-1].
         // verifica que altura por defecto se añade al final
         // da error con el double
