@@ -253,11 +253,107 @@ public class AlturaAlumnoTest {
     void calulaMaximo() {
 
         //When (Cuando)
+        //double maximo=0;
+        //double posicion=0;
         double [] array = {2,4,6};
+        //double [] arrayMaximo = {posicion,maximo};
         double [] arrayCopia = Arrays.copyOf(array, array.length);
 
         // Do (Hacer)
 
-        //assertEquals(6, AlturaAlumno.c
+        double[] arrayMaximo = AlturaAlumno.calculaMaximo(arrayCopia);
+
+        // Then (Entonces)
+
+        assertEquals(2, arrayMaximo[0]);
+        assertEquals(6, arrayMaximo[1]);
+    }
+
+    @Test
+    void calulaMaximo2() {
+
+        //When (Cuando)
+
+        double [] array = {-2,-4,0};
+        double [] arrayCopia = Arrays.copyOf(array, array.length);
+
+        // Do (Hacer)
+
+        double[] arrayMaximo = AlturaAlumno.calculaMaximo(arrayCopia);
+
+        // Then (Entonces)
+        assertEquals(2, arrayMaximo[0]);
+        assertEquals(0, arrayMaximo[1]);
+        //assertThrows(ArrayIndexOutOfBoundsException.class, () -> AlturaAlumno.calculaMaximo(arrayCopia));
+    }
+
+    @Test
+    void calulaMaximo3() {
+
+        //When (Cuando)
+
+        double [] array = new double [0];
+        double [] arrayCopia = Arrays.copyOf(array, array.length);
+
+        // Do (Hacer)
+
+        double[] arrayMaximo = AlturaAlumno.calculaMaximo(arrayCopia);
+
+        // Then (Entonces)
+        assertEquals(0, arrayMaximo[0]);
+        assertEquals(0, arrayMaximo[1]);
+        //assertThrows(ArrayIndexOutOfBoundsException.class, () -> AlturaAlumno.calculaMaximo(arrayCopia));
+    }
+
+    @Test
+    void calculaMaximo4() {
+        // array sera de longitud 2
+        //When (Cuando)
+
+        //Do (Hacer )
+
+        //Then (Entonces)
+
+    }
+    @Test
+    void calculaMedia () {
+
+        double [] array = {4,6,10};
+        double [] arrayCopia = Arrays.copyOf(array, array.length);
+
+        // Do (Hacer)
+
+        double arrayMedia = AlturaAlumno.calculaMedia(arrayCopia);
+
+        // Then (Entonces)
+        assertEquals(6.666666666666667, arrayMedia);
+    }
+
+    @Test
+    void calculaMedia2 () {
+
+        double [] array = {-4,-6,10};
+        double [] arrayCopia = Arrays.copyOf(array, array.length);
+
+        // Do (Hacer)
+
+        double arrayMedia = AlturaAlumno.calculaMedia(arrayCopia);
+
+        // Then (Entonces)
+        assertEquals(0, arrayMedia);
+    }
+
+    @Test
+    void calculaMedia3 () {
+
+        double [] array = new double [0];
+        double [] arrayCopia = Arrays.copyOf(array, array.length);
+
+        // Do (Hacer)
+
+        double arrayMedia = AlturaAlumno.calculaMedia(arrayCopia);
+
+        // Then (Entonces)
+        assertEquals(0, arrayMedia);
     }
 }
