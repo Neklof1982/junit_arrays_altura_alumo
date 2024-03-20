@@ -33,7 +33,7 @@ public class AlturaAlumnoTest {
         // verifica que el nombre "Maria" esta en la posicion ultima
     }
     @Test
-    void aniadeNombre2() {
+    void aniadeNombrePosicion() {
         final String [] array = new String[0];
 
         String nombre ="Maria";
@@ -43,7 +43,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void aniadeNombre3() {
+    void aniadeNombreLongitud() {
         final String [] array = new String[0];
         int longInicial = array.length;
         String nombre ="Maria";
@@ -54,7 +54,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void aniadeNombre4() {
+    void aniadeNombreArray() {
 
         final String [] array = new String [10];
 
@@ -70,7 +70,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void aniadeAltura () {
+    void aniadeAlturaPorDefecto () {
 
         //When (Cuando)
         double[] array = {1.70, 1.90}; // Alturas iniciales
@@ -88,7 +88,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void modificaAltura() {
+    void modificaAlturaPorPosicionFOR() {
 
         // When (Cuando)
 
@@ -113,7 +113,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void modificaAltura2 () {
+    void modificaAlturaPorPosicion () {
 
         //When (Cuando)
         //controla que este dentro del array
@@ -133,7 +133,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void buscaNombre1 () {
+    void buscaNombre () {
 
         //When (Cuando)
 
@@ -151,7 +151,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void buscaNombre2 () {
+    void buscaNombreNoExiste () {
 
         //When (Cuando)
 
@@ -169,7 +169,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void buscaNombre3 () {
+    void buscaNombreArrayVacio () {
 
         //When (Cuando)
 
@@ -187,7 +187,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void buscaNombre4 () {
+    void buscaNombreBusquedaVacia () {
 
         //When (Cuando)
 
@@ -225,7 +225,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void mostar1 () {
+    void mostarSinMostrar () {
         // dará correcto
         // When (Cuando)
 
@@ -239,7 +239,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void mostrar2() {
+    void mostrarConExcepcion() {
         //va a dar fallo
         String [] arrayNombre = {"Jose", "Paco", "Maria"};
         double [] arrayAltura = {1.6, 1.9 };
@@ -270,7 +270,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void calulaMaximo2() {
+    void calulaMaximoConNegativo() {
 
         //When (Cuando)
 
@@ -288,7 +288,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void calulaMaximo3() {
+    void calulaMaximoConArrayVacio() {
 
         //When (Cuando)
 
@@ -330,7 +330,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void calculaMedia2 () {
+    void calculaMediaConNegativo () {
 
         double [] array = {-4,-6,10};
         double [] arrayCopia = Arrays.copyOf(array, array.length);
@@ -344,7 +344,7 @@ public class AlturaAlumnoTest {
     }
 
     @Test
-    void calculaMedia3 () {
+    void calculaMediaConArrayVacio () {
 
         double [] array = new double [0];
         double [] arrayCopia = Arrays.copyOf(array, array.length);
