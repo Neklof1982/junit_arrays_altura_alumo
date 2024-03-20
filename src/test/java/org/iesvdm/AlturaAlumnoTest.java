@@ -29,7 +29,7 @@ public class AlturaAlumnoTest {
         String[] arrayActual = AlturaAlumno.añadeNombre
                 (array, "Maria");
 
-        assertTrue( arrayActual[arrayActual.length-1].equals(nombre));
+        assertEquals(arrayActual[arrayActual.length - 1], nombre);
         // verifica que el nombre "Maria" esta en la posicion ultima
     }
     @Test
@@ -103,7 +103,7 @@ public class AlturaAlumnoTest {
 
         // Then (Entonces)
 
-        assertTrue(altura == array[posicion]);
+        assertEquals(altura, array[posicion]);
 
         for (int i = 0; i < array.length; i++) {
             if (i!= posicion) {
@@ -129,7 +129,7 @@ public class AlturaAlumnoTest {
         // Then (Entonces):
 
         //assertArrayEquals(arrayCopia, array);
-        assertTrue(array[1] == 1.9);
+        assertEquals(1.9, array[1]);
     }
 
     @Test
