@@ -309,6 +309,7 @@ public class AlturaAlumnoTest {
     @Test
     void calculaMaximo4() {
         // array sera de longitud 2
+        //falta ---------------------------
         //When (Cuando)
 
         //Do (Hacer )
