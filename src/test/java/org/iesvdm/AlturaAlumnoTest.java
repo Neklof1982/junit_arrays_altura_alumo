@@ -114,6 +114,8 @@ public class AlturaAlumnoTest {
 
     @Test
     void modificaAltura2 () {
+
+        //When (Cuando)
         //controla que este dentro del array
         double[] array = {1.6, 1.8, 1.7};
         double[] arrayCopia = Arrays.copyOf(array, array.length);
@@ -126,6 +128,136 @@ public class AlturaAlumnoTest {
 
         // Then (Entonces):
 
-        assertArrayEquals(arrayCopia, array);
+        //assertArrayEquals(arrayCopia, array);
+        assertTrue(array[1] == 1.9);
+    }
+
+    @Test
+    void buscaNombre1 () {
+
+        //When (Cuando)
+
+        String [] array = {"Jose", "Paco", "Maria"};
+        String [] arrayCopia = Arrays.copyOf(array, array.length);
+        String nombre = "Maria";
+
+        // Do (hacer)
+
+       // AlturaAlumno.buscaNombre(arrayCopia, nombre);
+        //Then (Entonces)
+
+        assertEquals (2, AlturaAlumno.buscaNombre(arrayCopia,nombre));
+
+    }
+
+    @Test
+    void buscaNombre2 () {
+
+        //When (Cuando)
+
+        String [] array = {"Jose", "Paco", "Maria"};
+        String [] arrayCopia = Arrays.copyOf(array, array.length);
+        String nombre = "Luis";
+
+        // Do (hacer)
+
+        //AlturaAlumno.buscaNombre(arrayCopia, nombre);
+        //Then (Entonces)
+
+        assertEquals (-1, AlturaAlumno.buscaNombre(arrayCopia,nombre));
+
+    }
+
+    @Test
+    void buscaNombre3 () {
+
+        //When (Cuando)
+
+        String [] array = {};
+        String [] arrayCopia = Arrays.copyOf(array, array.length);
+        String nombre = "Luis";
+
+        // Do (hacer)
+
+        //AlturaAlumno.buscaNombre(arrayCopia, nombre);
+        //Then (Entonces)
+
+        assertEquals (-1, AlturaAlumno.buscaNombre(arrayCopia,nombre));
+
+    }
+
+    @Test
+    void buscaNombre4 () {
+
+        //When (Cuando)
+
+        String [] array = {"Jose", "Paco", "Maria"};
+        String [] arrayCopia = Arrays.copyOf(array, array.length);
+        String nombre = "";
+
+        // Do (hacer)
+
+        //AlturaAlumno.buscaNombre(arrayCopia, nombre);
+        //Then (Entonces)
+
+        assertEquals(-1, AlturaAlumno.buscaNombre(arrayCopia,nombre));
+
+    }
+
+    @Test
+    void mostrar () {
+
+        // When (Cuando)
+
+        String [] arrayNombre = {"Jose", "Paco", "Maria"};
+        double [] arrayAltura = {1.6, 1.9, 1.7};
+
+        //Do (hacer)
+
+        AlturaAlumno.mostrar(arrayNombre, arrayAltura);
+
+        //Then (Entonces)
+
+
+        assertEquals(arrayNombre[0]= "Jose",arrayAltura[1] = 1.6);
+        assertEquals(arrayNombre[1]= "Paco",arrayAltura[1] = 1.9);
+        assertEquals(arrayNombre[2]= "Maria",arrayAltura[1] = 1.7);
+    }
+
+    @Test
+    void mostar1 () {
+        // dará correcto
+        // When (Cuando)
+
+        String [] arrayNombre = {"Jose", "Paco", "Maria"};
+        double [] arrayAltura = {1.6, 1.9, 1.7};
+
+        // Do (Hacer)
+        // Then (Entonces)
+
+        assertDoesNotThrow(() -> AlturaAlumno.mostrar(arrayNombre, arrayAltura));
+    }
+
+    @Test
+    void mostrar2() {
+        //va a dar fallo
+        String [] arrayNombre = {"Jose", "Paco", "Maria"};
+        double [] arrayAltura = {1.6, 1.9 };
+
+        // Do (Hacer)
+        // Then (Entonces)
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> AlturaAlumno.mostrar(arrayNombre,arrayAltura));
+    }
+
+    @Test
+    void calulaMaximo() {
+
+        //When (Cuando)
+        double [] array = {2,4,6};
+        double [] arrayCopia = Arrays.copyOf(array, array.length);
+
+        // Do (Hacer)
+
+        //assertEquals(6, AlturaAlumno.c
     }
 }
